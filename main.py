@@ -77,7 +77,7 @@ print(X_test.shape)
 print(Y_test.shape)
 
 # -------- Lancement de l'entrainement
-W, b = Ann.Ann(X_train, Y_train, X_test, Y_test, 0.01, 100)
+W, b = Ann.Ann(X_train, Y_train, X_test, Y_test, 0.01, 30000)
 
 with open("params.txt", "w") as fichier:
     for row in W:
