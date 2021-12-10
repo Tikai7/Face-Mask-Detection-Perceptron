@@ -23,7 +23,7 @@ def preprocess_image():
     X = X.reshape(X.shape[0], -1)/X.max()
     W = np.loadtxt("params.txt")
     W = W.reshape((X.shape[1], 1))
-    b = np.array([0.23048032])
+    b = np.loadtxt("params_b.txt")
     return X, W, b
 
 

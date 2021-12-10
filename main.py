@@ -77,11 +77,11 @@ print(X_test.shape)
 print(Y_test.shape)
 
 # -------- Lancement de l'entrainement
-W, b = Ann.Ann(X_train, Y_train, X_test, Y_test, 0.01, 50000)
+W, b = Ann.Ann(X_train, Y_train, X_test, Y_test, 0.01, 100)
 
 with open("params.txt", "w") as fichier:
     for row in W:
         np.savetxt(fichier, row)
 
 with open("params_b.txt", "w") as fichier_1:
-    fichier_1.write(np.array2string(b, separator=',', suppress_small=False))
+    np.savetxt(fichier_1, b)
