@@ -11,10 +11,8 @@ def preprocess_image():
     images = input("Donnez le nom de l'image : ")
     ext = input("Donnez nom extention : ")
     im = glob.glob(f"images/{images}.{ext}")
-    print(im)
 
     for image in im:
-        print(image)
         data = Image.open(image)
         gs_image = data.convert(mode='L')
         gs_image_resized = gs_image.resize((64, 64))
@@ -35,6 +33,6 @@ print("Prediction en cours...")
 y_pred, proba = Ann.predict(X, W, b)
 
 if y_pred:
-    print(f"Masque detecté : {proba}")
+    print(f"Masque non detecté : {proba}")
 else:
-    print(f"Masqué non detecté {proba}")
+    print(f"Masqué detecté {1-proba}")

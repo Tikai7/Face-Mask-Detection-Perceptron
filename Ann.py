@@ -38,7 +38,7 @@ def predict(X, W, b):
     return (A >= 0.5, A)
 
 
-def Ann(X, y, X_test, y_test, learning_rate=0.1, n_iteration=100):
+def Ann(X, y, X_test, y_test, learning_rate=0.1, n_iteration=10000):
 
     W, b = init(X)
     train_loss = []
