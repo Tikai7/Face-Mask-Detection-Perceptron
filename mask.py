@@ -27,12 +27,22 @@ def preprocess_image():
     return X, W, b
 
 
-X, W, b = preprocess_image()
+launch = True
 
-print("Prediction en cours...")
-y_pred, proba = Ann.predict(X, W, b)
+while launch:
+    asking = '00'
+    X, W, b = preprocess_image()
 
-if y_pred:
-    print(f"Masque non detecté : {proba}")
-else:
-    print(f"Masqué detecté {1-proba}")
+    print("Prediction en cours...")
+    y_pred, proba = Ann.predict(X, W, b)
+
+    if y_pred:
+        print(f"Masque non detecté : {proba}")
+    else:
+        print(f"Masqué detecté {1-proba}")
+
+    while len(asking) != 1:
+        asking = input("Voulez vous continuer ? O / N : ")
+
+    asking = asking.lower()
+    launch = asking == 'o'
