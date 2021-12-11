@@ -20,7 +20,9 @@ def preprocess_image():
         folder_name_list.append(plt.imread(image))
 
     X = np.array(folder_name_list)
+    print(X.shape)
     X = X.reshape(X.shape[0], -1)/X.max()
+    print(X.shape)
     W = np.loadtxt("params.txt")
     W = W.reshape((X.shape[1], 1))
     b = np.loadtxt("params_b.txt")
