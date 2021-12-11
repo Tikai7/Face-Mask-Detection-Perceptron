@@ -9,8 +9,6 @@ To use it, execute the mask_video.py file
 # With Images
 To use it, execute the mask.py file
   - insert the name of your image (putten in the folder images/) 
-  or
-  - insert a folder with many images to analyze
   - then the extension (.jpg,.png etc...)
   - And then enjoy the prediction ! 
 (Accuracy >= 65%)
