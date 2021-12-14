@@ -13,11 +13,13 @@ while(True):
     W = W.reshape((X.shape[1], 1))
     b = np.loadtxt("params_b.txt")
     y_pred, proba = Ann.predict(X, W, b)
+    print(y_pred)
     font = cv2.FONT_HERSHEY_SIMPLEX
-    if y_pred:
-        cv2.putText(frame,f"No Mask : {proba[0]}% ",(10,450),font,1,color=(0,0,255),thickness=3)
-    else:
-        cv2.putText(frame,f"Mask : {1-proba[0]}% ",(10,450),font,1,color=(0,255,0),thickness=3)
+    for pred,acc in zip(y_pred,proba):
+        if pred:
+            cv2.putText(frame,f"Mask : {acc}% ",(10,450),font,1,color=(0,255,0),thickness=3)
+        else:
+            cv2.putText(frame,f"No Mask : {1-acc}% ",(10,450),font,1,color=(0,0,255),thickness=3)
 
     cv2.imshow('frame',frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
