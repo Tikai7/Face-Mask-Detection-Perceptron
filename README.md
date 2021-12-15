@@ -21,7 +21,7 @@ First
   - We initialize the model with randoms parameters ( init() ) 
   
 Then   
-  - We do 30000 iterations for the training, and for each iteration 
+  - We do 50000 iterations for the training, and for each iteration 
   - We create a model
   - We calculate the gradients
   - We update the parameters 
