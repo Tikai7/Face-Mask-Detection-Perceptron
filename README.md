@@ -1,12 +1,13 @@
 # Face-Mask-Detection-Perceptron
 Simple face-mask-detector using a perceptron
+![train_test_result](https://user-images.githubusercontent.com/68500496/147692599-91395275-c2dd-4f83-b2b1-5b079cef3bba.png)
 
 # How to use it
-# With Video
+## With Video
 To use it, execute the mask_video.py file
   - And enjoy ! (press 'q' to exit)
 (Accuracy >= 65%)
-# With Images
+## With Images
 To use it, execute the mask.py file
   - insert the name of your image (putten in the folder images/) 
   - then the extension (.jpg,.png etc...)
